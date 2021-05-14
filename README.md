@@ -4,9 +4,9 @@
 
 I majored in computer engineering at Myongji University, 
 
-completed an internship course at Metanet, 
+completed an internship course at Metanet(2019), 
 
-and worked as a backend developer at Daewoo Information Systems.
+and worked as a backend developer at Daewoo Information Systems. (2020~2021)
 
 ## Tech & Skills
 
