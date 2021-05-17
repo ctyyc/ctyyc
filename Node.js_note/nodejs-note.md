@@ -45,3 +45,9 @@ express --view=pug myapp
     - Polling 방식 : 클라이언트가 서버에 주기적으로 요청 후 응답을 받는 방식
     - Long Polling 방식 : Client가 서버에 대한 요청을 유지하여 반복적인 요청을 없애고 유효한 이벤트가 발생하면 응답을 해주는 방식
     - WebSocket 방식 : 클라이언트와 서버의 양방향 연결 채널 구성 (Socket.io를 이용하여 구 버전도 사용 가능)
+
+
+
+<br/>
+<br/>
+이 글은 '한 눈에 끝내는 Node.js'를 참고하였습니다.
