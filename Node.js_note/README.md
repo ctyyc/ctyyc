@@ -41,13 +41,67 @@ express --view=pug myapp
 ### 라우터
     express에서 '라우팅'이라는 개념은 클라이언트로부터 요청받은 URL과 뷰를 매칭시키는 것
 
+### 미들웨어
+    - 자기가 수행 할 부분을 수행하고 다음 과정으로 진행을 넘기는 것을 의미합니다.
+    - 미들웨어를 사용하는 이유는 어떤 미들웨어에서 req, res 객체에 속성 또는 메서드를 추가했을 때, 다른 미들웨어서도 이전 미들웨어에서 추가한 req, res 객체의 속성 또는 메서드를 사용할 수 있기 때문입니다.
+
 ### 클라이언트/서버 통신 방식
     - Polling 방식 : 클라이언트가 서버에 주기적으로 요청 후 응답을 받는 방식
     - Long Polling 방식 : Client가 서버에 대한 요청을 유지하여 반복적인 요청을 없애고 유효한 이벤트가 발생하면 응답을 해주는 방식
     - WebSocket 방식 : 클라이언트와 서버의 양방향 연결 채널 구성 (Socket.io를 이용하여 구 버전도 사용 가능)
 
+### ORM(Object Relational Mappings)
+    - 프로그램 상의 객체(Object)와 DB의 테이블(Relation)이 일대일 대응하는 관계를 맺는 것(Mapping)을 의미합니다.
+    -bORM을 이용하면 query가 아닌 메서드로서 데이터를 조작할 수 있다는 것이 큰 장점입니다.
+    -bORM의 특징은 특정 DB에 종속되지 않는다는 것입니다.
+
+### Sequelize
+    Node.js기반의 ORM으로 Promise 문법을 사용합니다.
+```
+npm install sequelize mysql2
+npm install -g sequelize-cli
+sequelize init
+```
+
+#### cli로 model 생성
+```
+sequelize model:create --name TABLE_NAME --attributes "COLUMN1:type, COLUMN2:type, COLUMN3:type"
+```
+
+### Migration
+- "up"기능과 "down"기능을 가진 일련의 데이터베이스 작업입니다.(up은 변경, down은 복원)
+
+#### 컬럼 수정 후
+```
+sequelize db:migrate 
+```
+
+#### 마이그레이션 이후 모델을 수정한 경우,
+```
+sequelize db:migrate:undo // 이후 마이그레이션 파일 변경
+```
+
+### method-override
+    method-override 모듈은 put, delete 방식을 지원한다.
+
+### 클라이언트에서 넘어온 매개변수 받는 방법
+
+#### URL 파라미터
+    - req.params.변수명
+    - 이 방식은 게시글 수정과 삭제 할 때 사용했던 방법인데, URL에 동적인 데이터를 추가하는 방식입니다.
+    ex) 라우터를 등록할 때 app.get( /post/:postid ) 으로 경로를 설정했다면, 클라이언트에서 "/post/3"으로 요청 시, req.params.postid == 3 입니다.
+
+#### query 파라미터
+	- req.query.키
+	- URL 파라미터 방식과 같이 URL을 통해서 데이터를 얻을 수 있지만, query string의 key 값을 받아올 수 있습니다.
+	ex) 클라이언트에서 "/post?postid=3"으로 요청 시, req.query.postid == 3 입니다.
+
+#### form 파라미터
+	- req.body.name이름
+	- HTML form 태그를 통해 넘어온 데이터를 받는 방법입니다.
+	ex) 클라이언트에서 input 태그의 name="title" 일 때, "victolee"를 입력하고 전송 버튼을 누르면 req.body.title == vcitolee 입니다.
 
 
 <br/>
 <br/>
-이 글은 '한 눈에 끝내는 Node.js'를 참고하였습니다.
+이 글은 '한 눈에 끝내는 Node.js'와 'victolee'님의 블로그를 참고하였습니다.
