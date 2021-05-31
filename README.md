@@ -8,21 +8,17 @@ completed an internship course at Metanet(2019),
 
 and worked as a backend developer at Daewoo Information Systems. (2020~2021)
 
+
 ## Tech & Skills
 
 Languages: Javascript, Java
 
-Frameworks: express, Spring, MyBatis
+Frameworks: Spring, Node.js, React.js, MyBatis
 
-Database: MsSQL, MySQL, MongoDB
+Database: MS-SQL, MySQL, MongoDB
 
-etc: AWS, Azure, React.js, Git
+etc: AWS, Azure, git, SVN ...
 
-## Interested in...
-
-Typescript, Nestjs, jest
-
-TDD, MSA, Docker ...
 
 ## Contacts
 
