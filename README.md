@@ -1,25 +1,17 @@
-### Hello, Welcome to Minkoo's GitHub 👋
-
-## I am a...
+### Hello, I'm Minkoo Park 👋
 
 I majored in computer engineering at Myongji University, 
 
-completed an internship course at Metanet(2019), 
+and have the following careers
 
-and worked as a backend developer at Daewoo Information Systems. (2020~2021)
+### History
 
+completed an internship course at Metanet(2019)
 
-## Tech & Skills
+worked as a backend developer at Daewoo Information Systems. (2020~2021)
 
-Languages: Javascript, Java
+Currently, I am working as a developer at Coocon. (2021~)
 
-Frameworks: Spring, Node.js, React.js, MyBatis
-
-Database: MS-SQL, MySQL, MongoDB
-
-etc: AWS, Azure, git, SVN ...
-
-
-## Contacts
+### Contacts
 
 Email: ctyyc@naver.com, pmkoo1994@gmail.com
